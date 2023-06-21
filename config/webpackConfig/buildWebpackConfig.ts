@@ -5,7 +5,7 @@ import webpack from "webpack";
 import {webpackDevServer} from "./webpackDevServer";
 
 export function buildWebpackConfig(params: BuildWebpackConfig): webpack.Configuration {
-    const {mode, paths, isDev} = params;
+    const {mode = 'development', paths, isDev = true} = params;
     return {
         mode,
         entry: paths.entry,
@@ -18,7 +18,7 @@ export function buildWebpackConfig(params: BuildWebpackConfig): webpack.Configur
             extensions: ['.tsx', '.ts', '.js'],
         },
         module: {
-            rules: webpackRules(),
+            rules: webpackRules(params),
         },
         plugins: webpackPlugins(paths),
         devtool: isDev && 'inline-source-map',

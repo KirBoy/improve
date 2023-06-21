@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-
+import classes from './ab.modules.scss';
+import './styles.scss'
 export const Test = () => {
     const [count, setCount] = useState(0);
 
@@ -7,9 +8,9 @@ export const Test = () => {
         setCount(prevState => prevState + 1)
     }
     return (
-        <div>
+        <div className={classes.div}>
             {count}
-            <button onClick={onClick}>x</button>
+            <button className={'button'} onClick={onClick}>x</button>
         </div>
     );
 };
