@@ -1,18 +1,18 @@
 export type BuildMode = 'production' | 'development';
 
 export interface BuildPaths {
-    entry: string;
-    output: string;
-    html: string
+	entry: string;
+	output: string;
+	html: string;
 }
 
 export interface BuildWebpackConfig {
-    paths: BuildPaths;
-    mode: BuildMode;
-    isDev: boolean;
+	paths: BuildPaths;
+	mode: BuildMode;
+	isDev: boolean;
 }
 
 export interface BuildEnv {
-    port: number;
-    mode: BuildMode;
+	port: number;
+	mode: BuildMode;
 }
