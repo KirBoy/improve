@@ -9,4 +9,10 @@ export interface BuildPaths {
 export interface BuildWebpackConfig {
     paths: BuildPaths;
     mode: BuildMode;
+    isDev: boolean;
+}
+
+export interface BuildEnv {
+    port: number;
+    mode: BuildMode;
 }

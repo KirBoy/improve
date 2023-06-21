@@ -4,7 +4,11 @@
   "description": "",
   "private": true,
   "scripts": {
-    "build": "webpack"
+    "start": "webpack serve --open",
+    "start:dev": "webpack serve --open --env mode=development",
+    "start:prod": "webpack serve --open --env mode=production",
+    "build:dev": "webpack --env mode=development",
+    "build:prod": "webpack --env mode=production"
   },
   "author": "kirboy",
   "license": "ISC",
@@ -19,6 +23,7 @@
     "ts-node": "^10.9.1",
     "typescript": "^5.1.3",
     "webpack": "^5.87.0",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   }
 }

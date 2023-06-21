@@ -2,9 +2,10 @@ import {webpackRules} from "./webpackRules";
 import {webpackPlugins} from "./webpackPlugins";
 import {BuildWebpackConfig} from "./types";
 import webpack from "webpack";
+import {webpackDevServer} from "./webpackDevServer";
 
 export function buildWebpackConfig(params: BuildWebpackConfig): webpack.Configuration {
-    const {mode, paths} = params;
+    const {mode, paths, isDev} = params;
     return {
         mode,
         entry: paths.entry,
@@ -20,5 +21,7 @@ export function buildWebpackConfig(params: BuildWebpackConfig): webpack.Configur
             rules: webpackRules(),
         },
         plugins: webpackPlugins(paths),
+        devtool: isDev && 'inline-source-map',
+        devServer: isDev ? webpackDevServer() : undefined,
     }
 }

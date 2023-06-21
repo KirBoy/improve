@@ -7,3 +7,5 @@ function kkew(a: string) {
 }
 
 kkew('ad')
+
+document.body.style.background = 'black'
