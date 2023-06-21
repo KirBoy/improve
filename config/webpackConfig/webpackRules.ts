@@ -7,8 +7,15 @@ export function webpackRules(): webpack.RuleSetRule[] {
         exclude: /node_modules/,
     }
     const cssLoader = {
-        test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
+        test: /\.s[ac]ss$/i,
+        use: [
+            // Creates `style` nodes from JS strings
+            "style-loader",
+            // Translates CSS into CommonJS
+            "css-loader",
+            // Compiles Sass to CSS
+            "sass-loader",
+        ],
     }
 
     const imagesLoader = {

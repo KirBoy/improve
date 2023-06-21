@@ -7,7 +7,7 @@ import path from "path";
 
 const paths: BuildPaths = {
     html: './public/index.html',
-    entry: './src/index.ts',
+    entry: './src/index.tsx',
     output: path.resolve(__dirname, 'dist')
 }
 export default (env: BuildEnv) => {
