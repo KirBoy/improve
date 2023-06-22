@@ -1,11 +1,10 @@
 import path from 'path';
+import type { Configuration } from 'webpack-dev-server';
 
-export function webpackDevServer() {
+export function webpackDevServer(): Configuration {
 	return {
-		static: {
-			directory: path.join(__dirname, 'dist'),
-		},
-		compress: true,
+		historyApiFallback: true,
 		port: 8080,
+		hot: true,
 	};
 }

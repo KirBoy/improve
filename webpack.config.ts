@@ -12,6 +12,8 @@ const paths: BuildPaths = {
 };
 export default (env: BuildEnv) => {
 	const { mode } = env;
-	const isDev = mode === 'development';
+
+	const isDev = mode !== 'production';
+
 	return buildWebpackConfig({ paths, mode, isDev });
 };
