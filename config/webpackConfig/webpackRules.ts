@@ -10,6 +10,7 @@ export function webpackRules({
 		use: 'ts-loader',
 		exclude: /node_modules/,
 	};
+
 	const cssLoader = {
 		test: /\.s[ac]ss$/i,
 		use: [
@@ -25,6 +26,7 @@ export function webpackRules({
 					},
 				},
 			},
+			'postcss-loader',
 			'sass-loader',
 		],
 	};

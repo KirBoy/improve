@@ -1,13 +1,16 @@
 import { createRoot } from 'react-dom/client';
-import './styles.scss';
-import { App } from './App';
+import './index.scss';
+import { App } from './pages/App';
 import { BrowserRouter } from 'react-router-dom';
+import ThemeProvider from './theme/ThemeProvider';
 
 const element = document.getElementById('root');
 const root = createRoot(element!);
 
 root.render(
 	<BrowserRouter>
-		<App />
+		<ThemeProvider>
+			<App />
+		</ThemeProvider>
 	</BrowserRouter>
 );

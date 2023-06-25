@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer {
+	//:root {
+	//  --color-text-base: 255, 255, 255;
+	//  --color-text-muted: #008fff;
+	//  --color-text-inverted: #008fff;
+	//  --color-fill: 67, 56, 202;
+	//  --color-button-accent: 255, 255, 255;
+	//  --color-button-accent-hover: 238, 242, 255;
+	//  --color-button-muted: 99, 102, 241;
+	//}
+	.light {
+		--color-text-base: 255, 255, 255;
+		--color-text-muted: #ff5436;
+		--color-text-inverted: 220, 38, 38;
+		--color-fill: 185, 28, 28;
+		--color-button-accent: 255, 255, 255;
+		--color-button-accent-hover: 254, 242, 242;
+		--color-button-muted: 239, 68, 68;
+		--background-color-base: #000000;
+	}
+
+	.dark {
+		--color-text-base: 17, 24, 2;
+		--color-text-muted: #008fff;
+		--color-text-inverted: 235, 250, 204;
+		--color-fill: 179, 255, 23;
+		--color-button-accent: 36, 52, 3;
+		--color-button-accent-hover: 55, 79, 5;
+		--color-button-muted: 212, 255, 122;
+		--background-color-base: #000334;
+	}
+}
