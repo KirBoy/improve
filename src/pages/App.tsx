@@ -2,7 +2,7 @@ import React, { lazy, Suspense } from 'react';
 import '../index.scss';
 
 import { Link, Route, Routes } from 'react-router-dom';
-import { useTheme } from '../theme/useTheme';
+import { useTheme } from '@/theme/useTheme';
 
 const MainPage = lazy(() => import('./MainPage'));
 const Calendar = lazy(() => import('./Calendar'));

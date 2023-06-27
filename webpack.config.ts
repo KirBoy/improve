@@ -9,6 +9,7 @@ const paths: BuildPaths = {
 	html: './public/index.html',
 	entry: './src/index.tsx',
 	output: path.resolve(__dirname, 'dist'),
+	srs: path.resolve(__dirname, 'src'),
 };
 export default (env: BuildEnv) => {
 	const { mode } = env;

@@ -3,6 +3,7 @@ import { webpackPlugins } from './webpackPlugins';
 import { BuildWebpackConfig } from './types';
 import webpack from 'webpack';
 import { webpackDevServer } from './webpackDevServer';
+import { webpackResolvers } from './webpackResolvers';
 
 export function buildWebpackConfig(
 	params: BuildWebpackConfig
@@ -17,9 +18,7 @@ export function buildWebpackConfig(
 			path: paths.output,
 			clean: true,
 		},
-		resolve: {
-			extensions: ['.tsx', '.ts', '.js'],
-		},
+		resolve: webpackResolvers(paths),
 		module: {
 			rules: webpackRules(params),
 		},

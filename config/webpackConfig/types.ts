@@ -4,6 +4,7 @@ export interface BuildPaths {
 	entry: string;
 	output: string;
 	html: string;
+	srs: string;
 }
 
 export interface BuildWebpackConfig {
