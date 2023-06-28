@@ -1,11 +1,9 @@
-import React, { lazy, Suspense } from 'react';
+import React from 'react';
 import '../index.scss';
 
-import { Link, Route, Routes } from 'react-router-dom';
-import { useTheme } from '@/theme/useTheme';
-
-const MainPage = lazy(() => import('./MainPage'));
-const Calendar = lazy(() => import('./Calendar'));
+import { Link } from 'react-router-dom';
+import { useTheme } from '@/shared/theme/useTheme';
+import { AppRoutes } from '@/app/routes';
 
 export const App = () => {
 	const { theme, toggleTheme } = useTheme();
@@ -25,12 +23,7 @@ export const App = () => {
 				</button>
 				<Link to='/'>главная</Link>
 				<Link to='/calendar'>Calendar</Link>
-				<Suspense fallback={<div>loading</div>}>
-					<Routes>
-						<Route path='/' element={<MainPage />} />
-						<Route path='/calendar' element={<Calendar />} />
-					</Routes>
-				</Suspense>
+				<AppRoutes />
 			</div>
 		</div>
 	);
