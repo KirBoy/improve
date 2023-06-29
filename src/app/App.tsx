@@ -9,7 +9,7 @@ export const App = () => {
 	const { theme, toggleTheme } = useTheme();
 	return (
 		<div className={theme}>
-			<div className='bg-base'>
+			<div>
 				<div>
 					<h1 className='font-light text-3xl underline hover:text-cyan-700 cursor-pointe inline-block text-skin-muted'>
 						Hello world!
